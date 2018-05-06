@@ -30,13 +30,37 @@
                                     <action selector="onEnableButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fq7-1v-bbp"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fUr-nE-aZK">
+                                <rect key="frame" x="37" y="236" width="326" height="30"/>
+                                <color key="minimumTrackTintColor" red="1" green="0.025269722179999999" blue="0.1089021579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="thumbTintColor" red="0.22711220931058954" green="0.95686274510000002" blue="0.92424848082415956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="volumnChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="HkA-h7-s4G"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音量调节0~1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fn-cQ-MWN">
+                                <rect key="frame" x="151" y="207" width="98" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="wX7-f1-6gP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SJx-42-h6l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5vw-ta-BFU"/>
+                            <constraint firstItem="fUr-nE-aZK" firstAttribute="top" secondItem="2fn-cQ-MWN" secondAttribute="bottom" constant="8" symbolic="YES" id="8ix-om-Jl0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fUr-nE-aZK" secondAttribute="bottom" constant="402" id="8jf-mH-tPr"/>
+                            <constraint firstItem="2fn-cQ-MWN" firstAttribute="top" secondItem="SJx-42-h6l" secondAttribute="bottom" constant="57" id="G9E-8j-NDD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SJx-42-h6l" secondAttribute="bottom" constant="517" id="Gbs-84-ozh"/>
+                            <constraint firstItem="fUr-nE-aZK" firstAttribute="leading" secondItem="SJx-42-h6l" secondAttribute="leading" id="HPe-8w-s6y"/>
                             <constraint firstItem="SJx-42-h6l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="LVb-9W-AEt"/>
                             <constraint firstItem="SJx-42-h6l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="NAW-Xb-PRz"/>
+                            <constraint firstItem="2fn-cQ-MWN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="151" id="mo0-ct-WRH"/>
+                            <constraint firstItem="2fn-cQ-MWN" firstAttribute="centerX" secondItem="fUr-nE-aZK" secondAttribute="centerX" id="nee-yP-dRV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

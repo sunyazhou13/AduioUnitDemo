@@ -114,7 +114,7 @@ static const UInt32     inBufferByteSize = 2048;     //缓冲的大小字节
         memset(_audioQueueBuffers[i]->mAudioData, 0, inBufferByteSize);
     }
     //设置AudioQueue
-    AudioQueueSetParameter(_audioQueue, kAudioQueueParam_Volume, 1.0);
+    AudioQueueSetParameter(_audioQueue, kAudioQueueParam_Volume, 0.5);
 }
 
 //C 函数实现部分
@@ -206,6 +206,12 @@ static void CheckStatus(OSStatus status, NSString *message, BOOL fatal) {
         AudioQueueStop(_audioQueue, YES);
     }
 }
+
+- (IBAction)volumnChange:(UISlider *)sender {
+    //设置AudioQueue
+    AudioQueueSetParameter(_audioQueue, kAudioQueueParam_Volume, sender.value);
+}
+
 
 @end
 
